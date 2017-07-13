@@ -22,7 +22,6 @@
  add new message | POST | message/:id
  update message | PUT | message/:id
  delete message | DELETE | message/:id
- delete message | DELETE | message/:id
  get users by sender id | GET |user/:id/search
  
  
