@@ -12,16 +12,16 @@
  
  Operation | Verb | Route 
  --- | --- | ---
- get user by id | GET | user/:id
+ get user by id | GET | user/:userId
  get all users | GET | user
  add new user | POST | user
- update user | PUT | user/:id
- delete user | DELETE | user/:id
- get message | GET | message/:id
+ update user | PUT | user/:userId
+ delete user | DELETE | user/:userId
+ get message | GET | message/:messageId
  get all message | GET | message
- add new message | POST | message/:id
- update message | PUT | message/:id
- delete message | DELETE | message/:id
+ add new message | POST | message/:messageId
+ update message | PUT | message/:messageId
+ delete message | DELETE | message/:messageId
  get users by sender id | GET |user/:id/search
  
  
