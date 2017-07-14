@@ -3,6 +3,8 @@ const User = require('../model/index').User
 
 const addUser = (user) => new User(user).save()
 
+const getAll = () => User.find({})
+
 
 
 
@@ -12,5 +14,6 @@ const addUser = (user) => new User(user).save()
 
 
 module.exports = {
-  addUser
+  addUser,
+  getAll
 }
