@@ -5,6 +5,8 @@ const addUser = (user) => new User(user).save()
 
 const getAll = () => User.find({})
 
+const getById = (userId) => User.findById(userId)
+
 
 
 
@@ -15,5 +17,6 @@ const getAll = () => User.find({})
 
 module.exports = {
   addUser,
-  getAll
+  getAll,
+  getById
 }

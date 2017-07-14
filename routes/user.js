@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
     .catch( err => res.sendStatus(400))
 })
 
+router.get('/:id', (req, res) => {
+  userService.getById(req.params.id)
+    .then( user =>  res.status(200).send(user))
+    .catch( err => res.sendStatus(400))
+})
 
 
 router.post('/', (req, res) => {
