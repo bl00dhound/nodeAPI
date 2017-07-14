@@ -1,4 +1,6 @@
+const R = require('ramda')
 const User = require('../model/index').User
+const Message = require('../model/index').Message
 
 
 const addUser = (user) => new User(user).save()
@@ -11,6 +13,15 @@ const updateUser = (userId, data) => User.findByIdAndUpdate(userId, data, {new :
 
 const deleteById = (userId) => User.findByIdAndRemove(userId)
 
+const findReceivers = (senderId) => Message.find({senderId: senderId})
+  .then(R.pluck('receiverId'))
+  .then(R.uniq)
+  .then(receiverIds => User.find({
+    _id: {
+      $in: receiverIds
+    }
+  }))
+
 
 
 module.exports = {
@@ -18,5 +29,6 @@ module.exports = {
   getAll,
   getById,
   updateUser,
-  deleteById
+  deleteById,
+  findReceivers
 }

@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 
 const messageSchema = new Schema({
   senderId: {
-    type: Schema.ObjectId,
+    type: String,
     require: true
   },
   receiverId: {
-    type: Schema.ObjectId,
+    type: String,
     require: true
   },
   text: {

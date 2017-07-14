@@ -4,7 +4,7 @@ const messageService = require('../services/message')
 
 router.get('/', (req, res) => {
   messageService.getAll()
-    .then( message => res.status(200).send(message))
+    .then( messages => res.status(200).send(message))
     .catch( err => res.sendStatus(400))
 })
 
@@ -16,7 +16,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   messageService.addMessage(req.body)
-    .then( message => res.status(200).send(message))
+    .then( message => res.status(201).send(message))
     .catch( err => res.sendStatus(400))
 })
 
@@ -31,5 +31,8 @@ router.delete('/:id', (req, res) => {
     .then( message => res.status(200).send(message))
     .catch( err => res.sendStatus(400))
 })
+
+
+
 
 module.exports = router
