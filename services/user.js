@@ -23,7 +23,6 @@ const findReceivers = (senderId) => Message.find({senderId: senderId})
   }))
 
 
-
 module.exports = {
   addUser,
   getAll,

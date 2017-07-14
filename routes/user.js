@@ -17,12 +17,8 @@ router.get('/:id', (req, res) => {
 router.get('/:id/search', (req, res) => {
   userService.findReceivers(req.params.id)
     .then( users =>  res.status(200).send(users))
-    .catch( err => {
-      console.log(err)
-      res.sendStatus(400)
-    } )
+    .catch( err => res.sendStatus(400))
 })
-
 
 router.post('/', (req, res) => {
   userService.addUser(req.body)

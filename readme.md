@@ -1,11 +1,16 @@
 # Simple chat-API
 
- ### for starting
+ #### Install project:
+ * ```git clone https://github.com/bl00dhound/nodeAPI```
+ * ```cd nodeAPI```
+ * ```npm install```
  
- 1. ```git clone https://github.com/bl00dhound/nodeAPI```
- 2. ```nodeAPI```
- 3. ```npm install```
- 4. ```npm start```
+ #### Import database:
+ * ```mongorestore -d api ./repositorie/api```
+
+ #### Run:
+ * ```npm start```
+ 
  
  ### REST API
  #### http://localhost:9009/api
