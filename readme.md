@@ -24,7 +24,7 @@
  delete user | DELETE | user/:userId
  get message | GET | message/:messageId
  get all message | GET | message
- add new message | POST | message/:messageId
+ add new message | POST | message
  update message | PUT | message/:messageId
  delete message | DELETE | message/:messageId
  get users by sender id | GET |user/:id/search
